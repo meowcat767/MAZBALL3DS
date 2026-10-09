@@ -48,7 +48,13 @@ static bool sceneInit()
     // Make the fragment stage display the vertex colour.
     C3D_TexEnv* env = C3D_GetTexEnv(0);
     C3D_TexEnvInit(env);
-    C3D_TexEnvSrc(env, C3D_Both, GPU_PRIMARY_COLOR, 0, 0);
+    C3D_TexEnvSrc(
+    env,
+    C3D_Both,
+    GPU_PRIMARY_COLOR,
+    GPU_PRIMARY_COLOR,
+    GPU_PRIMARY_COLOR
+);
     C3D_TexEnvFunc(env, C3D_Both, GPU_REPLACE);
 
     // Copy vertices into memory suitable for the GPU.

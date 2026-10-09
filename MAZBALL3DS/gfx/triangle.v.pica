@@ -1,9 +1,14 @@
+.fvec projection[4]
 
 .out outpos position
 .out outclr color
 
 .proc main
-    mov outpos, v0
+    dp4 outpos.x, projection[0], v0
+    dp4 outpos.y, projection[1], v0
+    dp4 outpos.z, projection[2], v0
+    dp4 outpos.w, projection[3], v0
+
     mov outclr, v1
     end
 .end
