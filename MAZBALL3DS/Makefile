@@ -26,7 +26,7 @@ LIBPATHS := -LC:/devkitPro/libctru/lib
 
 LD := arm-none-eabi-g++
 
-OFILES := $(BUILD)/source/main.o
+OFILES := $(BUILD)/source/main.o $(BUILD)/triangle.shbin.o
 
 .PHONY: all clean
 
