@@ -1,0 +1,12 @@
+.out outpos position
+.out outclr color
+
+.proc main
+    ; pass the input position through to the GPU!
+    mov outpos, v0
+    
+    ; pass the vertex colour through
+    mov outclr, v1
+    
+    end
+.end
