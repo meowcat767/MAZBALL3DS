@@ -30,9 +30,13 @@ OFILES := $(BUILD)/source/main.o
 
 .PHONY: all clean
 
-all: $(TARGET).3dsx
+all: $(TARGET).3dsx $(SHADER)
 
 include $(DEVKITARM)/3ds_rules
+
+$(SHADER): $(GRAPHICS)/triangle.v.pica
+	@mkdir -p $(BUILD)
+	$(PICASSO) -o $@ $<
 
 $(TARGET).elf: $(OFILES)
 
